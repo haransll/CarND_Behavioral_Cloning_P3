@@ -22,8 +22,8 @@ The project instructions from Udacity suggest starting from a known self-driving
 The Adam optimizer was chosen with default parameters and the chosen loss function was mean squared error (MSE). The final layer  is a fully-connected layer with a single neuron.
 
 | Input       | Filter Depth   | Filter Size  |Pad|Stride| No. Neurons|
-| ------------- |:-------------:| -----:|:----:|:----:|
-| Conv Layer 1     | 16 | 8x8|Same|4| |
+| ------------- |:-------------:| -----:|:----:|:----:|:----:|
+| Conv Layer 1     | 16 | 8x8|Same|4| | |
 | Conv Layer 2     | 32|  5x5 |Same |2||
 | Conv Layer 3| 64 |   5x5|Same|2| |
 |Fully-connected 1| x|x|x|x| 512|
