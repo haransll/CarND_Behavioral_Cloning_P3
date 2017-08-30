@@ -37,7 +37,7 @@ The Adam optimizer was chosen with default parameters and the chosen loss functi
 
 ### 2. Preprocessing
 
-In training mode, the simulator produces three images per frame while recording corresponding to left-, right-, and center-mounted cameras, each giving a different perspective of the track ahead. The simulator also produces a `csv` file which includes file paths for each of these images, along with the associated steering angle, throttle, brake, and speed for each frame. My algorithm loads the file paths for all three camera views for each frame, along with the angle (adjusted by +0.25 for the left frame and -0.25 for the right), into two numpy arrays `image_paths` and `angles`. [*`model.py` lines 174-211*]
+In training mode, the simulator produces three images per frame while recording corresponding to left-, right-, and center-mounted cameras, each giving a different perspective of the track ahead. The simulator also produces a `csv` file which includes file paths for each of these images, along with the associated steering angle, throttle, brake, and speed for each frame. My algorithm loads the file paths for all three camera views for each frame, along with the angle (adjusted by +0.5 for the left frame and -0.5 for the right), into two numpy arrays `image_paths` and `angles`.
 
 Images produced by the simulator in training mode are 320x160x3, and therefore require preprocessing prior to being fed to the CNN because it expects input images to be size 80x160. To achieve this,
 * Crop the bottom 25 pixels and the top 70 pixels   from the image
